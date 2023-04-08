@@ -5,6 +5,7 @@ var data = {
         "position": "Python / Golang developer",
         "location": "Georgia, Batumi",
         "summary": "Backend developer with data engineer and QA background.",
+        "photo": "https://media.licdn.com/dms/image/C4D03AQGiytX3ZNWFUQ/profile-displayphoto-shrink_800_800/0/1549811543944?e=1686182400&v=beta&t=a-czuaSW0_faw15GsdRId1Nu581lbzyndgzCbW3vgUg",
         "languages": [
             "Russian, Native",
             "English, B2"
@@ -95,6 +96,7 @@ var data = {
 
 // Logic which fills HTML template with data above
 
+document.getElementById("about_me.photo").src = data.about_me.photo;
 document.getElementById("about_me.location").innerHTML = data.about_me.location;
 document.getElementById("about_me.contacts.phone").innerHTML = data.about_me.contacts.phone;
 document.getElementById("about_me.contacts.phone").href = "tel:" + data.about_me.contacts.phone;

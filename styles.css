@@ -55,6 +55,14 @@ img {
     max-width: 100%;
 }
 
+.photo {
+    width: 95%;
+    border: 3px solid #aeaea4;
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+
+
 p {
     margin-top: 0;
     margin-bottom: 0;
