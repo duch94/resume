@@ -46,7 +46,10 @@ body {
 }
 
 .summary {
-    font-size: 105%;
+    font-size: 125%;
+    text-align: justify;
+    text-justify: inter-word;
+    width: calc(100% - 20px);
 }
 
 /* Misc */
@@ -255,6 +258,9 @@ hr.experience_separator {
     font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
     margin-top: 10px;
     font-size: 105%;
+    text-align: justify;
+    text-justify: inter-word;
+    width: calc(100% - 20px);
 }
 
 .education ol > li div,
@@ -280,6 +286,9 @@ hr.experience_separator {
 
 .experience ol > li ul {
     padding-top: 0.5em;
+    text-align: justify;
+    text-justify: inter-word;
+    width: calc(100% - 20px);
 }
 
 .experience ol > li ul li {
