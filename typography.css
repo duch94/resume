@@ -1,11 +1,7 @@
 /* Typography */
 
-body, .sanserif {
+body, p, .sanserif {
     font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
-}
-
-p, .serif {
-    font-family: "Cardo", Georgia, serif;
 }
 
 h1,

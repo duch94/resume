@@ -4,8 +4,7 @@ var data = {
         "birth_date": "11-12-1994",
         "position": "Python / Golang developer",
         "location": "Georgia, Batumi",
-        "summary": "Backend developer with data engineer and QA background.",
-        "photo": "https://media.licdn.com/dms/image/C4D03AQGiytX3ZNWFUQ/profile-displayphoto-shrink_800_800/0/1549811543944?e=1686182400&v=beta&t=a-czuaSW0_faw15GsdRId1Nu581lbzyndgzCbW3vgUg",
+        "summary": "As a versatile professional with experience in data engineering, quality assurance, and backend development, I bring a unique perspective to the software development process. With 4 years of experience as a backend developer and 2 years of experience in QA, I have honed my communication skills and developed a knack for creative problem-solving. I am always eager to expand my knowledge and enjoy exploring new fields. In my free time, I enjoy playing games, taking walks with my dog, and watching YouTube shows with my wife. I am also an avid traveler and enjoy the freedom of driving a car to explore new destinations.",
         "languages": [
             "Russian, Native",
             "English, B2"
@@ -23,72 +22,125 @@ var data = {
         "time": "September 2012 - June 2016",
         "title": "Bachelor of Photonics and optoinformatics. Specialization - Computer photonics."
     }],
-    "skills": [
+    "stack": [
         "Python 3.9",
         "Fastapi",
         "Pytest",
-        "Apache Airflow",
-        "Golang",
-        "PostgreSQL",
-        "Prometheus + Grafana",
         "Kubernetes",
-        "Ansible",
+        "Docker",
         "Jenkins",
-        "Teamcity"
+        "Golang",
+        "Prometheus",
+        "Influx",
+        "Grafana"
     ],
     "work": [
         {
             "organization": "JettyCloud",
             "time_range": "June 2022 - Present",
             "position": "Python / Golang developer",
-            "summary": [
-                "JettyCloud develops for an American UCaaS platform RingCentral. Its 5M users around the world use RingCentral daily to stay connected with their co-workers and clients.",
-                "I am a part of the team, which maintains internal test framework.",
-                "I was involved in following activities:",
-                "Helped to add new functionality to test stubs of specific services",
-                "Involved in test framework maintanance like bug fixing or adding new functionality",
-                "Participated in development of distributed test platform"
+            "summary": "I have the opportunity to work at JettyCloud, where I contribute to the development of a cutting-edge UCaaS platform called RingCentral. With 5 million users worldwide relying on RingCentral to stay connected with their colleagues and clients, I am part of a dedicated team that ensures the platform's smooth functioning through developing internal test framework and here is what I worked at:",
+            "points": [
+                "Added new functionality to test stubs of specific services.",
+                "Maintained the internal test framework, adding new features and fixing bugs.",
+                "Introduced some features in distributed test platform.",
+                "Added ability to our self-developed library for InfluxDB to store metrics with labels.",
+                "Added jenkins job to deploy staging environment of our distributed test platform."
+            ],
+            "stack": [
+                "Python 3.9",
+                "Fastapi",
+                "Pytest",
+                "Kubernetes",
+                "Docker",
+                "Jenkins",
+                "Golang",
+                "Influx",
+                "Grafana"
             ]
         },
         {
             "organization": "OZON.ru",
             "time_range": "November 2021 - May 2022",
             "position": "Python / Golang developer",
-            "summary": [
-                "OZON is russia-wide marketplace, which offers local sellers big audience of buyers, logistics, warehouse for goods, goods pick points etc. OZON had 35 millions of active buyers and 3.4 billion USD of revenue in 2022.",
-                "I was part of the analytical metrics team. Our goal was to deliver metrics of users behavior to higher-level teams and management, so they could make right business decisions.",
-                "During that short period of time I:",
-                "Refactored notification system about “bad metrics” and moved notifications from Slack to Mattermost. Also added mypy, flake8, black and isort to it's repo.",
+            "summary": "At OZON, a Russia-wide marketplace with 35 million active buyers and $3.4 billion USD in revenue in 2022, I was part of the analytical metrics team. Our goal was to provide higher-level teams and management with metrics on user behavior, helping them make informed business decisions. During my time on the team:",
+            "points": [
+                "Refactored notification system about “bad metrics” and moved notifications from Slack to Mattermost.",
                 "Introduced python code formatters (flake8, black, isort) to the team and successfully integrated them to every our python repo.",
-                "Took part in development and rewriting of metrics management system. We moved it from slower service written in Python (each of three workers in pod could do not more than 2 RPS) to faster service written in Golang in 2 months and started to develop new features in it then.",
-                "Explored ways to visualize of our system's health and introduced them to the team."
+                "I wrote some of API endpoints which made us successfully migrate from a slower Python-based service to a faster Golang-based service in just two months, increasing the system's capabilities and enabling the development of new features.",
+                "I explored various methods of visualizing our system's health metrics and introduced them to the team."
+            ],
+            "stack": [
+                "Python 3.8",
+                "Fastapi",
+                "Pytest",
+                "Golang",
+                "PostgreSQL",
+                "Apache Airflow",
+                "Gitlab CI",
+                "Prometheus",
+                "Grafana"
             ]
         },
         {
             "organization": "ARRIVAL",
             "time_range": "September 2020 - July 2021",
             "position": "Python developer",
-            "summary": [
-                "Arrival is startup which develops commercial EV vehicles and microfactories to produce them. Arrival's customers were companies like UPS, UK Royal Mail, etc.",
-                "I was part of support team, which became responsible of validating e-car signals specification.",
-                "I took part in development of signals specifications test platform.",
-                "Also, developed prototype of system which simulates different level of signals in vehicle to prove the theory that fail signal of low-level system should trigger high-level system's fail signals."
+            "summary": "Arrival is startup which develops commercial EV vehicles and microfactories to produce them. Arrival's customers were companies like UPS, UK Royal Mail, etc. I was part of support team, which became responsible of validating e-car signals specification. My main achievments were:",
+            "points": [
+                "I worked on first iteration of DB structure of the new service. Later on this data was transfered to our database of signals validation system, mentioned above.",
+                "I developed prototype of system which simulates different level of signals in vehicle which proved the theory that fail signal of low-level system should trigger high-level system's fail signals.",
+                "I produced parts of system which validates signals specifications of vehicles.",
+                "Also I worked on routine tasks of data parsing and its tabular storing in google docs before this data was moved to PostgreSQL."
+            ],
+            "stack": [
+                "Python 3.8",
+                "Fastapi",
+                "Pytest",
+                "Pandas",
+                "PostgreSQL"
             ]
         },
         {
             "organization": "Dataduck",
             "time_range": "June 2019 - August 2020",
             "position": "Python developer",
-            "summary": [
-                "Dataduck offers B2B marketing services, their partners are companies like Google, Unity, Joom, Oppo, etc. As for 2022 they have over 7500 promo units per month.",
-                "I was a part of data analysts team and my goal was to deliver the data to the Vertica DB from inhouse sources and outer sources, such as Google Analytics or Appsflyer.",
-                "The majority of code was run by Apache Airflow framework, and some other scripts were in docker containers.",
-                "My main achievments were:",
+            "summary": "Dataduck offers B2B marketing services, their partners are companies like Google, Unity, Joom, Oppo, etc. As for 2022 they have over 7500 promo units per month. I was a part of data analysts team and my goal was to deliver the data to the Vertica DB from inhouse sources and outer sources, such as Google Analytics or Appsflyer. The majority of code was run by Apache Airflow framework, and some other scripts were in docker containers. What have I done:",
+            "points": [
                 "Installed and successfully supported ETL system Airflow.",
+                "Migrated periodic ETL jobs from Luigi to Airflow",
                 "Developed my first web service using framework Aiohttp which had grown from cron job.",
                 "Successfully solved plenty of problems with data parsing from different sources, when these sources changed their data format.",
                 "Integrated CI/CD system Teamcity to automate deploy of ETL and data analytical scripts.",
                 "Introduced and maintained the process of code review to the command of data analytics."
+            ],
+            "stack": [
+                "Python 3.8",
+                "Apache Airflow",
+                "Docker",
+                "Selenium",
+                "Aiohttp",
+                "Teamcity"
+            ]
+        },
+        {
+            "organization": "Speech Technology Center",
+            "time_range": "July 2018 - June 2019",
+            "position": "QA Automation Engineer",
+            "summary": "STC is big producer of speech recognition and speech generation technologies. Also, they develop face recognition system, and I was involved in testing automation of it's SDK. What I did:",
+            "points": [
+                "Migrated all tests from repository of QA team to the repository of face recognition dev team.",
+                "Refactored tests logic, removed redundant and outdated tests, added tests for new functionality.",
+                "Reworked performance test reports system from bunch of chaotic HTML files to structured data in MongoDB which was visualised in Grafana.",
+                "Drived integration of Scrum framework to our development team with help of our lead of QA and Dev department."
+            ], 
+            "stack": [
+                "Python 2.7",
+                "Python 3.6",
+                "Unittest",
+                "MongoDB",
+                "Grafana",
+                "Plotly"
             ]
         }
     ]
@@ -96,7 +148,6 @@ var data = {
 
 // Logic which fills HTML template with data above
 
-document.getElementById("about_me.photo").src = data.about_me.photo;
 document.getElementById("about_me.location").innerHTML = data.about_me.location;
 document.getElementById("about_me.contacts.phone").innerHTML = data.about_me.contacts.phone;
 document.getElementById("about_me.contacts.phone").href = "tel:" + data.about_me.contacts.phone;
@@ -107,8 +158,8 @@ document.getElementById("about_me.contacts.linkedin").href = data.about_me.conta
 document.getElementById("about_me.contacts.github").innerHTML = data.about_me.contacts.github;
 document.getElementById("about_me.contacts.github").href = "https://" + data.about_me.contacts.github;
 
-data.skills.forEach(function(item) {
-    var ul = document.getElementById("skills");
+data.stack.forEach(function(item) {
+    var ul = document.getElementById("stack");
     var li = document.createElement("li");
     var span = document.createElement("span");
     span.appendChild(document.createTextNode(item));
@@ -143,20 +194,42 @@ data.work.forEach(function(work_item) {
     header.appendChild(time);
     li.appendChild(header);
 
-    var span = document.createElement("span")
+    var span = document.createElement("span");
     span.innerHTML = work_item.organization;
     li.appendChild(span);
 
+    var summary = document.createElement("p");
+    summary.setAttribute("class", "experience")
+    summary.appendChild(document.createTextNode(work_item.summary));
+    li.appendChild(summary)
+
     var ul = document.createElement("ul");
-    ul.id = "work.summary";
+    ul.id = "work.points";
     
     document.getElementById("work").appendChild(li);
-    work_item.summary.forEach(function(summary_item) {
+    work_item.points.forEach(function(point_item) {
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(summary_item));
+        li.appendChild(document.createTextNode(point_item));
         ul.appendChild(li);
+        
     });
     li.appendChild(ul);
+   
+    var ul_inner_stack = document.createElement("ul");
+    var ul_stack = document.createElement("ul");
+    ul_stack.setAttribute("class", "skills_on_work");
+    work_item.stack.forEach(function(item) {
+        var li_stack = document.createElement("li");
+        var span_stack = document.createElement("span");
+        span_stack.appendChild(document.createTextNode(item))
+        li_stack.appendChild(span_stack);
+        ul_inner_stack.appendChild(li_stack);
+    });
+    ul_stack.appendChild(ul_inner_stack);
+    li.appendChild(ul_stack);
+    
+    var hr = document.createElement("hr");
+    li.appendChild(hr);
 });
 
 data.education.forEach(function(edu_item) {
