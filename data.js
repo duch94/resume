@@ -4,7 +4,7 @@ var data = {
         "birth_date": "11-12-1994",
         "position": "Python / Golang developer",
         "location": "Georgia, Batumi",
-        "summary": "As a versatile professional with experience in data engineering, quality assurance, and backend development, I bring a unique perspective to the software development process. With four years of experience as a backend developer and two years of experience in QA, I have honed my communication skills and developed a knack for creative problem-solving. I am always eager to expand my knowledge and enjoy exploring new fields. In my free time, I enjoy playing games, taking walks with my dog, and watching YouTube shows with my wife. I am also an avid traveler and enjoy the freedom of driving a car to explore new destinations.",
+        "summary": "As a versatile professional with experience in data engineering, quality assurance, and backend development, I bring a unique perspective to the software development process. With 4 years of experience as a backend developer and 2 years of experience in QA, I have honed my communication skills and developed a knack for creative problem-solving. I am always eager to expand my knowledge and enjoy exploring new fields. In my free time, I enjoy playing games, taking walks with my dog, and watching YouTube shows with my wife. I am also an avid traveler and enjoy the freedom of driving a car to explore new destinations.",
         "languages": [
             "Russian, Native",
             "English, B2"

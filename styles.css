@@ -52,6 +52,11 @@ body {
     width: calc(100% - 20px);
 }
 
+.summary > p {
+    font-family:  "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
 /* Misc */
 
 img {
