@@ -42,7 +42,7 @@ var data = {
             "organization": "Side project",
             "time_range": "June 2023 - Present",
             "position": "Golang developer",
-            "summary": "I am developing backend services for CMS and for mobile application from scratch, using Gin, Casbin for role-based access model, DocumentDB as DB and Redis as cache. I do this project on my spare time, 1-2 hours after work and 3-5 hours on weekend just to feel good developing something using exciting technologies which I wanted to try.",
+            "summary": "I am developing backend services for CMS and for mobile application from scratch, using Gin, Casbin for role-based access model, DocumentDB as DB and Redis as cache. I do this project on my spare time, 1-2 hours after work and 3-5 hours on weekend. I do it just to feel good developing something with exciting technologies which I wanted to try.",
             "points": [
                 "Developed backend services for CMS and for mobile application from scratch.",
                 "Added support of RBAC and simple JWT auth to CMS backend.",
@@ -50,7 +50,9 @@ var data = {
                 "Integrated one of backend services with Redmine API to provide feedback from users of mobile application.",
                 "Used SQS as communication bus between some services",
                 "Participated in building CI/CD pipelines to deploy applicaiton on couple of environments.",
-                "Wrote JS scripts which implement migrations."
+                "Wrote JS scripts which implement migrations.",
+                "Wrote dockerfiles for backend services and for applying migrations.",
+                "Tried to stick with 12-factor app paradigm."
             ],
           "stack": [
               "Golang 1.20",
