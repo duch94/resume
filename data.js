@@ -25,16 +25,41 @@ var data = {
     "stack": [
         "Python 3.9",
         "Fastapi",
-        "Pytest",
+        "Golang 1.20",
+        "Gin",
+        "MongoDB/DocumentDB",
+        "AWS SQS",
+        "AWS S3",
+        "Prometheus + Grafana",
         "Kubernetes",
+        "Pytest",
         "Docker",
         "Jenkins",
-        "Golang",
-        "Prometheus",
-        "Influx",
-        "Grafana"
+        "GitlabCI"
     ],
     "work": [
+        {
+            "organization": "Side project",
+            "time_range": "June 2023 - Present",
+            "position": "Golang developer",
+            "summary": [
+                "Developed backend services for CMS and for mobile application from scratch.",
+                "Added support of RBAC and simple JWT auth to CMS backend.",
+                "Migrated data and rewrote DB queries from MongoDB to DocumentDB to decrease efforts on database management.",
+                "Integrated our backend with Redmine API to provide feedback from users of mobile application.",
+                "Participated in building CI/CD pipelines to deploy applicaiton on couple of environments.",
+                "Wrote JS scripts which implement migrations."
+            ],
+          "stack": [
+              "Golang 1.20",
+              "Gin",
+              "MongoDB/DocumentDB",
+              "AWS SQS",
+              "AWS S3",
+              "Docker",
+              "GitlabCI"
+          ]
+        },
         {
             "organization": "JettyCloud",
             "time_range": "June 2022 - Present",
@@ -45,7 +70,8 @@ var data = {
                 "Maintained the internal test framework, adding new features and fixing bugs.",
                 "Introduced some features in distributed test platform.",
                 "Added ability to our self-developed library for InfluxDB to store metrics with labels.",
-                "Added jenkins job to deploy staging environment of our distributed test platform."
+                "Added jenkins job to deploy staging environment of our distributed test platform.",
+                "Improved documentation to ease onboarding of newcomers."
             ],
             "stack": [
                 "Python 3.9",
