@@ -153,26 +153,6 @@ var data = {
                 "Aiohttp",
                 "Teamcity"
             ]
-        },
-        {
-            "organization": "Speech Technology Center",
-            "time_range": "July 2018 - June 2019",
-            "position": "QA Automation Engineer",
-            "summary": "STC is big producer of speech recognition and speech generation technologies. Also, they develop face recognition system, and I was involved in testing automation of it's SDK. What I did:",
-            "points": [
-                "Migrated all tests from repository of QA team to the repository of face recognition dev team.",
-                "Refactored tests logic, removed redundant and outdated tests, added tests for new functionality.",
-                "Reworked performance test reports system from bunch of chaotic HTML files to structured data in MongoDB which was visualised in Grafana.",
-                "Drived integration of Scrum framework to our development team with help of our lead of QA and Dev department."
-            ], 
-            "stack": [
-                "Python 2.7",
-                "Python 3.6",
-                "Unittest",
-                "MongoDB",
-                "Grafana",
-                "Plotly"
-            ]
         }
     ]
 }
