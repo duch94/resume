@@ -7,15 +7,24 @@
     transform-origin: 0px 0px 0px;
 }
 
-p:blank, li:blank, div:blank, section:blank {
+p:blank,
+li:blank,
+div:blank,
+section:blank {
     display: none;
 }
 
-p:empty, li:empty, div:empty, section:empty {
+p:empty,
+li:empty,
+div:empty,
+section:empty {
     display: none;
 }
 
-p:-moz-only-whitespace, li:-moz-only-whitespace, div:-moz-only-whitespace, section:-moz-only-whitespace {
+p:-moz-only-whitespace,
+li:-moz-only-whitespace,
+div:-moz-only-whitespace,
+section:-moz-only-whitespace {
     display: none;
 }
 
@@ -45,6 +54,24 @@ body {
     flex-direction: row;
 }
 
+button {
+    /* font-size: 200%;
+    position-anchor: center; */
+    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.page_actions > ul {
+    width: 100%;
+    text-align: center;
+}
+
+.page_actions > ul > li > button {
+    height: 60px;
+    width: 80px;
+    padding: 0px;
+    display: inline-block;
+}
+
 .contact {
     line-height: 1.2;
     font-size: 110%;
@@ -58,7 +85,7 @@ body {
 }
 
 .summary > p {
-    font-family:  "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
     line-height: 1.2;
 }
 
@@ -74,7 +101,6 @@ img {
     border-radius: 5%;
     margin-bottom: 5%;
 }
-
 
 p {
     margin-top: 0;
@@ -101,12 +127,14 @@ li + li {
     margin-top: 0.4em;
 }
 
-.fa, .fab {
+.fa,
+.fab {
     text-align: center;
     min-width: 1em;
 }
 
-li .fa, li .fab {
+li .fa,
+li .fab {
     margin-right: 0.3em;
 }
 
@@ -121,7 +149,7 @@ hr.experience_separator {
 
 #save > section:first-of-type > aside {
     flex-basis: var(--sidebar-width);
-    padding: 0.1618in 0 0.1618in 0.1618in;
+    padding: 0.1618in 0.1618in 0.1618in 0.1618in;
     display: flex;
     flex-direction: column;
 }
@@ -132,7 +160,7 @@ hr.experience_separator {
 
 #save > section:first-of-type > aside > section:last-child {
     margin-top: auto;
-} 
+}
 
 #save > section:first-of-type > section {
     flex-basis: var(--main-width);
@@ -183,7 +211,7 @@ hr.experience_separator {
 }
 
 .skills > ul:after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
 }
@@ -208,7 +236,7 @@ hr.experience_separator {
 }
 
 .skills_on_work > ul {
-    content: '';
+    content: "";
     display: table;
     clear: both;
 }
@@ -217,7 +245,7 @@ hr.experience_separator {
     display: block;
     float: left;
     margin: 1px 1px 0 0;
-    margin-left: 1em !important;  /* I know that !important is bad practice, but CSS is hell */
+    margin-left: 1em !important; /* I know that !important is bad practice, but CSS is hell */
 }
 
 .skills_on_work > ul > li > span {

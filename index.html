@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" moznomarginboxes>
     <head>
         <meta charset="utf-8" />
@@ -6,21 +6,52 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta name="google" content="notranslate" />
         <!-- Metadata (autofilled by "Save to HTML") -->
-        <meta name="author" content="Joe Smith" />
-        <meta name="subject" content="A really good software engineer you should hire" />
+        <meta name="author" content="Viktor Titov" />
+        <meta
+            name="subject"
+            content="A really good software engineer you should hire"
+        />
         <meta name="keywords" content="coding, developing, hacking" />
         <meta name="date" content="2009-04-01" />
         <meta name="generator" content="html-resume-template" />
+        <link rel="icon" type="image/x-icon" href="favicon.svg" />
         <!-- Google Fonts, Normalize, and Font Awesome -->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:300,400,500&amp;subset=latin-ext" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://fonts.googleapis.com/css?family=Cardo|Montserrat:300,400,500&amp;subset=latin-ext"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+            integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+            crossorigin="anonymous"
+        />
         <!-- Custom Styles -->
         <link rel="stylesheet" type="text/css" href="./paper.css" />
         <link rel="stylesheet" type="text/css" href="./styles.css" />
         <link rel="stylesheet" type="text/css" href="./typography.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="./screen.css" />
-        <link rel="stylesheet" type="text/css" media="print" href="./print.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./screen.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="print"
+            href="./print.css"
+        />
         <script async defer src="https://buttons.github.io/buttons.js"></script>
         <title>Viktor Titov's CV</title>
     </head>
@@ -28,23 +59,82 @@
         <section id="save">
             <section class="sheet">
                 <aside>
+                    <section class="page_actions no-print">
+                        <h6>Page actions</h6>
+                        <ul>
+                            <li>
+                                <button
+                                    class="fa fa-print"
+                                    onclick="window.print()"
+                                >
+                                    <p>Print</p>
+                                </button>
+                                <button
+                                    class="fa fa-link"
+                                    id="copy_link_button"
+                                    onclick="navigator.clipboard.writeText(window.location.href)"
+                                >
+                                    <p id="copy_link_text">Link</p>
+                                </button>
+                                <button class="fa fa-music" id="music_button">
+                                    <p>Music</p>
+                                </button>
+                            </li>
+                            <li>
+                                <audio controls hidden id="music_controls">
+                                    <source
+                                        src="https://archive.org/download/JazzClassics/018%20%20Benny%20Goodman%20-%20Sing%2C%20Sing%2C%20Sing.mp3"
+                                        type="audio/mpeg"
+                                    />
+                                    <source
+                                        src="https://dn721702.ca.archive.org/0/items/JazzClassics/018%20%20Benny%20Goodman%20-%20Sing%2C%20Sing%2C%20Sing.mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
+                            </li>
+                        </ul>
+                    </section>
                     <section class="contact">
                         <h6>Contacts</h6>
                         <ul>
                             <li>
-                                <p><i class="fa fa-map-marker-alt" title="Location"></i> <a id="about_me.location"></a></p>
+                                <p>
+                                    <i
+                                        class="fa fa-map-marker-alt"
+                                        title="Location"
+                                    ></i>
+                                    <a id="about_me.location"></a>
+                                </p>
                             </li>
                             <li>
-                                <p><i class="fa fa-phone" title="Cell phone"></i> <a id="about_me.contacts.phone"></a></p>
+                                <p>
+                                    <i
+                                        class="fa fa-phone"
+                                        title="Cell phone"
+                                    ></i>
+                                    <a id="about_me.contacts.phone"></a>
+                                </p>
                             </li>
                             <li>
-                                <p><i class="fa fa-envelope" title="Email"></i> <a id="about_me.contacts.email"></a></p>
+                                <p>
+                                    <i class="fa fa-envelope" title="Email"></i>
+                                    <a id="about_me.contacts.email"></a>
+                                </p>
                             </li>
                             <li>
-                                <p><i class="fab fa-linkedin" title="Linkedin"></i> <a id="about_me.contacts.linkedin"></a></p>
+                                <p>
+                                    <i
+                                        class="fab fa-linkedin"
+                                        title="Linkedin"
+                                    ></i>
+                                    <a id="about_me.contacts.linkedin"></a>
+                                </p>
                             </li>
                             <li>
-                                <p><i class="fab fa-github" title="GitHub"></i> <a id="about_me.contacts.github"></a></p>
+                                <p>
+                                    <i class="fab fa-github" title="GitHub"></i>
+                                    <a id="about_me.contacts.github"></a>
+                                </p>
                             </li>
                         </ul>
                     </section>
@@ -56,18 +146,42 @@
                         <h6>Languages</h6>
                         <ul id="languages"></ul>
                     </section>
-                    <section class="references">
-                    </section>
+                    <section class="references"></section>
                 </aside>
                 <section>
-                    
                     <header class="name" aria-label="Joe Smith">
                         <a>
-                            <svg width="270px" height="46px" viewBox="0 0 270 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Montserrat-Regular, Montserrat" font-size="46" font-weight="normal">
-                                    <g id="Letter" transform="translate(-54.000000, -140.000000)" fill="#484848">
+                            <svg
+                                width="270px"
+                                height="46px"
+                                viewBox="0 0 270 46"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                                <g
+                                    id="Page-1"
+                                    stroke="none"
+                                    stroke-width="1"
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                    font-family="Montserrat-Regular, Montserrat"
+                                    font-size="46"
+                                    font-weight="normal"
+                                >
+                                    <g
+                                        id="Letter"
+                                        transform="translate(-54.000000, -140.000000)"
+                                        fill="#484848"
+                                    >
                                         <text>
-                                            <tspan x="54.728" y="174" id="about_me.contacts.name">JOE SMITH</tspan>
+                                            <tspan
+                                                x="54.728"
+                                                y="174"
+                                                id="about_me.contacts.name"
+                                            >
+                                                JOE SMITH
+                                            </tspan>
                                         </text>
                                     </g>
                                 </g>
@@ -81,26 +195,20 @@
                             <h6>Summary</h6>
                             <p id="about_me.summary"></p>
                         </section>
-                        <hr class="experience_separator"/>
+                        <hr class="experience_separator" />
                         <section class="experience">
                             <h6>Experience</h6>
-                            <ol id="work">
-                                
-                            </ol>
+                            <ol id="work"></ol>
                         </section>
                         <section class="education">
                             <h6>Education</h6>
-                            <ol id="education">
-                                
-                            </ol>
+                            <ol id="education"></ol>
                         </section>
                     </section>
                 </section>
             </section>
         </section>
-        <script src="data.js">
-            
-        </script>
+        <script src="data_filler.js"></script>
     </body>
     <!-- Developed by Tom Barrasso. https://barrasso.me -->
 </html>

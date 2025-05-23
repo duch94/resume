@@ -50,8 +50,14 @@ button:-moz-focusring,
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
 }
 
-#document-controls, #github-link, iframe {
+#document-controls,
+#github-link,
+iframe {
     display: none !important;
 }
