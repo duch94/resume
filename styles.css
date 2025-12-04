@@ -81,7 +81,7 @@ button {
 
 .page_actions > ul > li {
     display: flex;
-    gap: 9px; /* Add spacing between buttons */
+    gap: 10px; /* Add spacing between buttons */
     justify-content: center;
 }
 
@@ -93,6 +93,7 @@ button {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
+    margin-right: 0;
 }
 
 .page_actions > ul > li > button:hover {
