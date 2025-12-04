@@ -343,12 +343,14 @@ copy_link_button.addEventListener("click", function () {
 const music_button = document.getElementById("music_button");
 music_button.addEventListener("click", function () {
   var music_controls = document.getElementById("music_controls");
-  if (music_controls.hidden == true) {
-    music_controls.hidden = false;
+  if (window.getComputedStyle(music_controls).display === "none") {
+    music_controls.style.display = "block";
     music_controls.play();
+    music_button.classList.add("music-active");
   } else {
-    music_controls.hidden = true;
+    music_controls.style.display = "none";
     music_controls.pause();
+    music_button.classList.remove("music-active");
   }
 });
 
