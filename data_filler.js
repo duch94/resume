@@ -46,21 +46,27 @@ var data = {
       time_range: "May 2024 - Present",
       position: "Python developer",
       summary:
-        "Relocated to Bulgaria, joined Ringcentral office. Our team manages 3 projects, with main one migrating from AWS Lambdas + Step Functions to k8s microservices.",
+        "Relocated to Bulgaria, joined Ringcentral office. Our team belongs to SRE department and manages 3 projects for continous deployment. Main one is now migrating from AWS Lambdas + Step Functions to k8s microservices.",
       points: [
-        "Developed features in Python services deployed on AWS Lambdas + Step Functions.",
+        "Developed features and bugfixes in standalone Python services, deployed in Kubernetes.",
+        "Developed features and bugfixes in project using AWS Lambdas with AWS Step Functions.",
         "Enhanced internal libraries with new features for multistage release booking process.",
-        "Set up k8s dev environment: dockerfiles, deployment manifests, services and persistent volumes.",
-        "Optimized MongoDB queries, making requests 5x faster.",
-        "Migrated AWS service deployment from Serverless to Terraform.",
+        "Set up k8s dev and prod environment: dockerfiles, k8s manifests, helmcharts, CI/CD.",
+        "Optimized some MongoDB queries, making requests 5x faster.",
+        "Optimized cache hits for AWS Parameter Store, which reduced costs on Parameter store by ~90% and overall AWS accounts costs by ~30%.",
+        "Migrated AWS service deployment from Serverless to Terraform (deployment of lambdas, step functions, queues, parameters, etc.).",
       ],
       stack: [
         "Python 3.12",
         "Fastapi",
-        "Pytest",
+        "MongoDB",
+        "Redis",
         "Kubernetes",
-        "Terraform",
+        "Helm",
         "GitlabCI",
+        "Traefik",
+        "Pytest",
+        "Terraform",
         "AWS Lambdas",
         "AWS Step Functions",
         "AWS API Gateway",
@@ -380,13 +386,16 @@ fireworks_button.addEventListener("click", function () {
 
   // Colors for fireworks
   const colors = [
-    "#ff0000",
-    "#00ff00",
-    "#0000ff",
-    "#ffff00",
-    "#ff00ff",
-    "#00ffff",
-    "#ffffff",
+    "#C63347",
+    "#F28E63",
+    "#FC7F81",
+    "#FAEFC4",
+    "#F9AE9B",
+    "#792BB2",
+    "#2E42CB",
+    "#F75781",
+    "#E365E4",
+    "#FA5348",
   ];
 
   // Firework class
@@ -400,6 +409,7 @@ fireworks_button.addEventListener("click", function () {
       this.vx = Math.cos(this.angle) * this.speed;
       this.vy = Math.sin(this.angle) * this.speed;
       this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.color2 = colors[Math.floor(Math.random() * colors.length)];
       this.size = 2;
       this.reached = false;
     }
@@ -418,12 +428,15 @@ fireworks_button.addEventListener("click", function () {
     explode() {
       const particleCount = 50 + Math.floor(Math.random() * 50);
       for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle(this.x, this.y, this.color));
+        particles.push(new Particle(this.x, this.y, this.color, this.color2));
       }
     }
 
     draw() {
-      ctx.fillStyle = this.color;
+      var gradient = ctx.createLinearGradient(this.x, this.y, this.vx, this.vy);
+      gradient.addColorStop(0, this.color);
+      gradient.addColorStop(1, this.color2);
+      ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
@@ -432,17 +445,18 @@ fireworks_button.addEventListener("click", function () {
 
   // Particle class for explosion
   class Particle {
-    constructor(x, y, color) {
+    constructor(x, y, color, color2) {
       this.x = x;
       this.y = y;
       this.color = color;
-      this.size = 1 + Math.random();
+      this.color2 = color2;
+      this.size = 1 + Math.random() * 3;
       this.speed = 1 + Math.random() * 3;
       this.angle = Math.random() * Math.PI * 2;
       this.vx = Math.cos(this.angle) * this.speed;
       this.vy = Math.sin(this.angle) * this.speed;
-      this.gravity = 0.05;
-      this.life = 100;
+      this.gravity = 0.02;
+      this.life = 150;
       this.alpha = 1;
     }
 
@@ -482,7 +496,7 @@ fireworks_button.addEventListener("click", function () {
   // Animation loop
   function animate() {
     // Semi-transparent background to create trail effect
-    ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+    ctx.fillStyle = "rgba(05, 04, 37, 0.2)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Random chance to create a new firework
