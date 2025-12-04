@@ -60,16 +60,51 @@ button {
     font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
 }
 
+.page_actions {
+    border: 1px solid #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.page_actions > h6 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
 .page_actions > ul {
     width: 100%;
     text-align: center;
 }
 
+.page_actions > ul > li {
+    display: flex;
+    gap: 9px; /* Add spacing between buttons */
+    justify-content: center;
+}
+
 .page_actions > ul > li > button {
-    height: 60px;
-    width: 80px;
-    padding: 0px;
-    display: inline-block;
+    padding: 10px 15px; /* Use padding instead of fixed height/width */
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.page_actions > ul > li > button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.page_actions > ul > li > button:active {
+    background-color: #004085;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
 }
 
 .contact {

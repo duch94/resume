@@ -15,7 +15,7 @@ body {
 }
 
 /** Paper sizes **/
-body.A3_extended .sheet {
+body.A3_bottomless .sheet {
     width: 297mm;
 }
 body.A3 .sheet {
