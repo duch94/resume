@@ -2,17 +2,17 @@ var data = {
   about_me: {
     name: "Viktor Titov",
     birth_date: "11-12-1994",
-    position: "Python / Golang developer",
+    position: "Backend / Platform Engineer",
     location: "Bulgaria, Sofia",
     summary:
-      "Versatile professional with experience in data engineering, quality assurance, and backend development, bringing unique perspective to the software development process. With 4 years of experience as a backend developer and 2 years in QA, I've honed communication skills and developed creative problem-solving abilities. Always eager to expand knowledge and explore new fields. In free time, enjoy playing games, walking my dog, and watching YouTube with my wife. Avid traveler who enjoys driving to explore new destinations.",
+      "Backend / Platform Engineer with 6+ years of experience in Python and Go, building distributed systems, internal platforms, and cloud infrastructure. Experienced in Kubernetes, AWS, Terraform, and MongoDB, with focus on reliability, observability, and performance. Strong background across backend development, platform engineering, and test infrastructure.",
     languages: ["Russian, Native", "English, B2"],
     contacts: {
       phone: "+359 88 263 6556",
       telegram: "duch94",
       email: "vtduch@gmail.com",
       github: "github.com/duch94",
-      linkedin: "https://www.linkedin.com/in/viktor-titov-73246aab/",
+      linkedin: "https://www.linkedin.com/in/💻-viktor-titov-73246aab/",
     },
   },
   education: [
@@ -44,17 +44,17 @@ var data = {
     {
       organization: "Ringcentral",
       time_range: "May 2024 - Present",
-      position: "Python developer",
+      position: "Platform engineer",
       summary:
-        "Relocated to Bulgaria, joined Ringcentral office. Our team belongs to SRE department and manages 3 projects for continous deployment. Main one is now migrating from AWS Lambdas + Step Functions to k8s microservices.",
+        "Platform/SRE team building and operating a production CD platform across multiple environments, having completed migration from AWS Lambda and Step Functions to Kubernetes-based microservices, ensuring reliability for high-load clients with strict SLA/SLO requirements.",
       points: [
-        "Developed features and bugfixes in standalone Python services, deployed in Kubernetes.",
-        "Developed features and bugfixes in project using AWS Lambdas with AWS Step Functions.",
-        "Enhanced internal libraries with new features for multistage release booking process.",
-        "Set up k8s dev and prod environment: dockerfiles, k8s manifests, helmcharts, CI/CD.",
-        "Optimized some MongoDB queries, making requests 5x faster.",
-        "Optimized cache hits for AWS Parameter Store, which reduced costs on Parameter store by ~90% and overall AWS accounts costs by ~30%.",
-        "Migrated AWS service deployment from Serverless to Terraform (deployment of lambdas, step functions, queues, parameters, etc.).",
+        "Developed and maintained Python microservices running in Kubernetes, improving system reliability and deployment consistency.",
+        "Contributed to migration from AWS Lambda and Step Functions to Kubernetes-based microservices, owning key components and filling critical gaps in platform and infrastructure expertise.",
+        "Improved reliability and debuggability of release scheduling system by introducing detailed logging and standardizing time calculations to UTC, resolving issues caused by multi-timezone deployments and environment-specific maintenance windows.",
+        "Designed and implemented Kubernetes environments (Dev and Prod), including manifests, Helm charts, CI/CD workflows.",
+        "Optimized MongoDB queries, improving request latency by up to 5x and significantly enhancing service responsiveness.",
+        "Reduced AWS infrastructure costs by ~30% (both Production and Development environments) by introducing Parameter Store and Secrets Manager Lambda extension.",
+        "Migrated AWS infrastructure from Serverless framework to Terraform, improving consistency, reproducibility, and deployment control.",
       ],
       stack: [
         "Python 3.12",
@@ -78,16 +78,16 @@ var data = {
       time_range: "June 2023 - February 2024",
       position: "Golang developer",
       summary:
-        "Developed backend services for CMS and mobile application from scratch using Gin, Casbin for RBAC, DocumentDB and Redis cache. Side project done in spare time (1-2 hours after work, 3-5 hours on weekends) to experiment with exciting technologies.",
+        "Designed and deployed backend services for CMS and mobile applications using Go, Gin, AWS DocumentDB, Redis.",
       points: [
-        "Built CMS and mobile app backend services from scratch.",
-        "Implemented RBAC and JWT auth for CMS backend.",
-        "Migrated from MongoDB to DocumentDB for easier DB management.",
-        "Integrated backend with Redmine API for mobile app user feedback.",
-        "Implemented SQS for inter-service communication",
-        "Helped build CI/CD pipelines for multi-environment deployment.",
-        "Created JS migration scripts.",
-        "Created dockerfiles for services and migrations.",
+        "Built backend services for CMS and mobile app from scratch.",
+        "Designed system with stateless architecture and async communication using Amazon SQS to support scaling.",
+        "Implemented RBAC using Casbin and JWT authentication",
+        "Migrated database from MongoDB to DocumentDB, simplifying operations and improving maintainability.",
+        "Integrated backend with Redmine API for processing user feedback.",
+        "Designed and configured CI/CD pipelines for multi-environment deployment.",
+        "Developed migration scripts for MongoDB.",
+        "Containerized services and migrations using Docker.",
         "Followed 12-factor app principles.",
       ],
       stack: [
