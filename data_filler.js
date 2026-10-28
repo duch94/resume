@@ -1,11 +1,10 @@
 var data = {
   about_me: {
     name: "Viktor Titov",
-    birth_date: "11-12-1994",
     position: "Senior Platform Engineer | Python, Go, Kubernetes, AWS",
     location: "Bulgaria, Sofia",
     summary:
-      "Senior Platform Engineer with 6+ years of experience in Python and Go, building distributed systems, internal platforms, and cloud infrastructure. Experienced in Kubernetes, AWS, Terraform, and MongoDB, with focus on reliability, observability, and performance. Strong background across backend development, platform engineering, and test infrastructure.",
+      "Senior Platform Engineer, specializing in Python and Go for distributed systems, internal platforms, and cloud infrastructure. Experienced in Kubernetes, AWS, Terraform, and MongoDB, with focus on reliability, observability, and performance. Improved request latency by up to 5× and reduced AWS infrastructure costs by ~30%.",
     languages: ["Russian, Native", "English, B2"],
     contacts: {
       phone: "+359 88 263 6556",
@@ -24,17 +23,17 @@ var data = {
     },
   ],
   stack: [
-    "Python",
-    "FastAPI",
-    "Golang",
-    "Gin",
-    "MongoDB / AWS DocumentDB",
-    "AWS",
     "Kubernetes",
+    "AWS",
     "Terraform",
-    "Pytest",
+    "Python",
+    "Go",
+    "Helm",
+    "RabbitMQ",
+    "MongoDB / AWS DocumentDB",
+    "FastAPI",
     "GitLab CI",
-    "Jenkins",
+    "pytest",
   ],
   work: [
     {
@@ -42,16 +41,15 @@ var data = {
       time_range: "July 2026 - Present",
       position: "Senior Platform Engineer",
       summary:
-        "Platform/SRE team building and operating a production CD platform across multiple environments, ensuring reliability for high-load clients with strict SLA/SLO requirements.",
+        "Platform/SRE team building and operating a production continuous delivery orchestrator across multiple environments. Deployment engineers describe deployments as pipelines of steps, each integrating with an external service to perform an action, to deliver services with strict SLA/SLO requirements.",
       points: [
-        "Built and rolled out to production a Go service monitoring RabbitMQ queues fed with copies of real events via exchange bindings, with Grafana dashboards.",
-        "Extended the service with checks for integration services availability and token/SSL certificate expiration, improving incident detection and response times.",
-        "Implemented an authorization system to prevent unauthorized modifications to deployment pipelines.",
-        "Introduced spec-driven development with OpenSpec and improved documentation to provide AI agents with detailed project context.",
-        "Integrated AI code review with custom prompts for internal and customer-facing repositories.",
+        "Built and rolled out to production a Go service monitoring RabbitMQ queues fed with copies of events via exchange bindings, with Grafana dashboards; in the first month it helped catch a production bug and prevent an incident.",
+        "Added monitoring of integration service availability and token/SSL certificate expiry.",
+        "Implemented ownership-based authorization (CODEOWNERS-backed) to comply with application security requirements.",
+        "Introduced spec-driven development with OpenSpec, improved documentation to provide AI agents with detailed project context, and integrated AI code review.",
       ],
       stack: [
-        "Golang",
+        "Go",
         "Python 3.13",
         "FastAPI",
         "MongoDB",
@@ -61,7 +59,7 @@ var data = {
         "Helm",
         "GitLab CI",
         "Traefik",
-        "Pytest",
+        "pytest",
         "AWS",
       ],
     },
@@ -70,16 +68,16 @@ var data = {
       time_range: "May 2024 - June 2026",
       position: "Platform Engineer",
       summary:
-        "Drove migration of the CD platform from AWS Lambda and Step Functions to Kubernetes-based microservices, owning key components and covering platform and infrastructure expertise gaps.",
+        "Same team, earlier stage of the platform. Contributed to the migration of the CD orchestrator from AWS Lambda and Step Functions to Kubernetes-based microservices, implementing key services and infrastructure components.",
       points: [
         "Designed and implemented Kubernetes environments (Dev and Prod), including manifests, Helm charts, CI/CD workflows.",
-        "Optimized MongoDB queries, improving request latency by up to 5x and significantly enhancing service responsiveness.",
+        "Cut request latency ~5x (≈1s → ≈0.2s) by replacing an ORM operation that loaded the entire MongoDB collection into application memory with a hand-written aggregation pipeline executed through the ORM.",
         "Reduced AWS infrastructure costs by ~30% (both Production and Development environments) by introducing Parameter Store and Secrets Manager Lambda extension.",
         "Migrated AWS infrastructure from Serverless framework to Terraform, improving consistency, reproducibility, and deployment control.",
-        "Mentored a new hire and ran retrospectives that helped rebuild team morale and collaboration after a period of attrition.",
+        "Onboarded and mentored a new team member; introduced regular retrospectives to improve team collaboration.",
       ],
       stack: [
-        "Golang",
+        "Go",
         "Python 3.13",
         "FastAPI",
         "MongoDB",
@@ -89,7 +87,7 @@ var data = {
         "Helm",
         "GitLab CI",
         "Traefik",
-        "Pytest",
+        "pytest",
         "Terraform",
         "AWS",
       ],
@@ -97,22 +95,17 @@ var data = {
     {
       organization: "Side project",
       time_range: "June 2023 - February 2024",
-      position: "Golang developer",
+      position: "Go developer",
       summary:
         "Designed and deployed backend services for CMS and mobile applications using Go, Gin, AWS DocumentDB, Redis.",
       points: [
-        "Built backend services for CMS and mobile app from scratch.",
-        "Designed system with stateless architecture and async communication using Amazon SQS to support scaling.",
-        "Implemented RBAC using Casbin and JWT authentication",
+        "Built backend services for CMS and mobile app from scratch, with stateless architecture and async communication via Amazon SQS to support scaling.",
+        "Implemented RBAC using Casbin and JWT authentication.",
+        "Designed CI/CD pipelines for multi-environment deployment; containerized services with Docker.",
         "Migrated database from MongoDB to DocumentDB, simplifying operations and improving maintainability.",
-        "Integrated backend with Redmine API for processing user feedback.",
-        "Designed and configured CI/CD pipelines for multi-environment deployment.",
-        "Developed migration scripts for MongoDB.",
-        "Containerized services and migrations using Docker.",
-        "Followed 12-factor app principles.",
       ],
       stack: [
-        "Golang 1.20",
+        "Go 1.20",
         "Gin",
         "MongoDB/DocumentDB",
         "AWS",
@@ -124,46 +117,43 @@ var data = {
     {
       organization: "JettyCloud",
       time_range: "June 2022 - May 2024",
-      position: "Python / Golang developer",
+      position: "Python / Go developer",
       summary:
-        "At JettyCloud, contributed to RingCentral UCaaS platform (5M+ users worldwide). Part of team developing internal test frameworks to ensure platform's smooth functioning.",
+        "JettyCloud is an external partner of RingCentral; contributed to RingCentral UCaaS platform (5M+ users worldwide). Part of team developing internal test frameworks to ensure platform's smooth functioning.",
       points: [
-        "Enhanced test stubs for specific services.",
-        "Maintained test framework: new features and bug fixes.",
-        "Added features to distributed test platform.",
+        "Maintained test framework and added features to distributed test platform; enhanced test stubs for specific services.",
         "Enhanced InfluxDB library to support labeled metrics.",
         "Created Jenkins job for test platform staging deployment.",
-        "Improved documentation for smoother onboarding.",
       ],
       stack: [
         "Python 3.9",
         "FastAPI",
-        "Pytest",
+        "pytest",
         "Kubernetes",
         "Docker",
         "Jenkins",
-        "Golang",
-        "Influx",
+        "Go",
+        "InfluxDB",
         "Grafana",
       ],
     },
     {
       organization: "OZON.ru",
       time_range: "November 2021 - May 2022",
-      position: "Python / Golang developer",
+      position: "Python / Go developer",
       summary:
         "At OZON marketplace (35M active buyers, $3.4B revenue in 2022), worked in analytical metrics team providing user behavior data to management for informed business decisions.",
       points: [
         "Refactored metrics alert system, migrating from Slack to Mattermost.",
         "Introduced code formatters (flake8, black, isort) across all Python repos.",
-        "Developed API endpoints for migration from Python to Golang service, completed in 2 months with improved performance.",
+        "Developed API endpoints for migration from Python to Go service, completed in 2 months with improved performance.",
         "Implemented new system health metrics visualization methods.",
       ],
       stack: [
         "Python 3.8",
         "FastAPI",
-        "Pytest",
-        "Golang",
+        "pytest",
+        "Go",
         "PostgreSQL",
         "Apache Airflow",
         "GitLab CI",
@@ -176,36 +166,33 @@ var data = {
       time_range: "September 2020 - July 2021",
       position: "Python developer",
       summary:
-        "At Arrival (EV startup serving UPS, UK Royal Mail), part of team validating e-car signals specifications. Key achievements:",
+        "At Arrival (EV startup serving UPS, UK Royal Mail), part of team validating e-car signals specifications.",
       points: [
         "Designed initial DB structure for new service, later integrated with signals validation system.",
         "Prototyped vehicle signal simulation system proving low-level failures cascade to high-level signals.",
         "Developed components for vehicle signal specification validation.",
         "Handled data parsing and Google Docs storage prior to PostgreSQL migration.",
       ],
-      stack: ["Python 3.8", "FastAPI", "Pytest", "Pandas", "PostgreSQL"],
+      stack: ["Python 3.8", "FastAPI", "pytest", "Pandas", "PostgreSQL"],
     },
     {
       organization: "Dataduck",
       time_range: "June 2019 - August 2020",
       position: "Python developer",
       summary:
-        "At Dataduck (B2B marketing with partners like Google, Unity), part of data team delivering info to Vertica DB from internal and external sources. Used Apache Airflow and Docker. Key contributions:",
+        "At Dataduck (B2B marketing with partners like Google, Unity), part of data team delivering info to Vertica DB from internal and external sources. Used Apache Airflow and Docker.",
       points: [
-        "Set up and maintained Airflow ETL system.",
-        "Migrated ETL jobs from Luigi to Airflow",
-        "Developed Aiohttp web service evolved from cron job.",
-        "Adapted parsers to handle changing data formats from various sources.",
-        "Integrated Teamcity for ETL and analytics scripts deployment.",
-        "Established code review process for data analytics team.",
+        "Set up and maintained Airflow ETL system; migrated ETL jobs from Luigi to Airflow.",
+        "Developed aiohttp web service evolved from cron job.",
+        "Integrated TeamCity for ETL and analytics scripts deployment.",
       ],
       stack: [
         "Python 3.8",
         "Apache Airflow",
         "Docker",
         "Selenium",
-        "Aiohttp",
-        "Teamcity",
+        "aiohttp",
+        "TeamCity",
       ],
     },
     // {
@@ -243,9 +230,13 @@ document.getElementById("about_me.contacts.email").innerHTML =
   data.about_me.contacts.email;
 document.getElementById("about_me.contacts.email").href =
   "mailto:" + data.about_me.contacts.email;
-document.getElementById("about_me.contacts.linkedin").innerHTML = "Linkedin";
+document.getElementById("about_me.contacts.linkedin").innerHTML = "LinkedIn";
 document.getElementById("about_me.contacts.linkedin").href =
   data.about_me.contacts.linkedin;
+document.getElementById("about_me.contacts.telegram").innerHTML =
+  "@" + data.about_me.contacts.telegram;
+document.getElementById("about_me.contacts.telegram").href =
+  "https://t.me/" + data.about_me.contacts.telegram;
 document.getElementById("about_me.contacts.github").innerHTML =
   data.about_me.contacts.github;
 document.getElementById("about_me.contacts.github").href =
@@ -278,8 +269,7 @@ data.work.forEach(function (work_item) {
   var header = document.createElement("header");
 
   var p = document.createElement("p");
-  p.setAttribute("class", "sanserif");
-  p.setAttribute("id", "work.position");
+  p.setAttribute("class", "sanserif work-position");
   p.innerHTML = work_item.position;
   header.appendChild(p);
 
@@ -298,7 +288,7 @@ data.work.forEach(function (work_item) {
   li.appendChild(summary);
 
   var ul = document.createElement("ul");
-  ul.id = "work.points";
+  ul.className = "work-points";
 
   document.getElementById("work").appendChild(li);
   work_item.points.forEach(function (point_item) {
