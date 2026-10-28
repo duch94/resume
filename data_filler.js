@@ -44,10 +44,12 @@ var data = {
     {
       organization: "Ringcentral",
       time_range: "May 2024 - Present",
-      position: "Platform engineer",
+      position: "Senior platform engineer",
       summary:
-        "Platform/SRE team building and operating a production CD platform across multiple environments, having completed migration from AWS Lambda and Step Functions to Kubernetes-based microservices, ensuring reliability for high-load clients with strict SLA/SLO requirements.",
+        "Platform/SRE team building and operating a production CD platform across multiple environments, having completed migration from AWS Lambda and Step Functions to Kubernetes-based microservices, ensuring reliability for high-load clients with strict SLA/SLO requirements. From July 2026 was promoted to Senior grade.",
       points: [
+        "Implemented system monitoring, improving incident detection and response times.",
+        "Implemented an authorization system to prevent unauthorized modifications to deployment pipelines.",
         "Developed and maintained Python microservices running in Kubernetes, improving system reliability and deployment consistency.",
         "Contributed to migration from AWS Lambda and Step Functions to Kubernetes-based microservices, owning key components and filling critical gaps in platform and infrastructure expertise.",
         "Improved reliability and debuggability of release scheduling system by introducing detailed logging and standardizing time calculations to UTC, resolving issues caused by multi-timezone deployments and environment-specific maintenance windows.",
@@ -57,10 +59,12 @@ var data = {
         "Migrated AWS infrastructure from Serverless framework to Terraform, improving consistency, reproducibility, and deployment control.",
       ],
       stack: [
-        "Python 3.12",
+        "Golang",
+        "Python 3.13",
         "Fastapi",
         "MongoDB",
         "Redis",
+        "RabbitMQ",
         "Kubernetes",
         "Helm",
         "GitlabCI",
