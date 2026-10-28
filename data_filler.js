@@ -48,6 +48,7 @@ var data = {
       summary:
         "Platform/SRE team building and operating a production CD platform across multiple environments, having completed migration from AWS Lambda and Step Functions to Kubernetes-based microservices, ensuring reliability for high-load clients with strict SLA/SLO requirements. From July 2026 was promoted to Senior grade.",
       points: [
+        "Onboarded a new team member and facilitated team retrospectives to improve collaboration and processes.",
         "Implemented system monitoring, improving incident detection and response times.",
         "Implemented an authorization system to prevent unauthorized modifications to deployment pipelines.",
         "Developed and maintained Python microservices running in Kubernetes, improving system reliability and deployment consistency.",
