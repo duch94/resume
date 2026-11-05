@@ -110,6 +110,7 @@ button {
     border: 1px solid #000;
 }
 
+
 .contact {
     line-height: 1.2;
     font-size: 110%;
@@ -196,9 +197,6 @@ hr.experience_separator {
     margin-top: 2em;
 }
 
-#save > section:first-of-type > aside > section:last-child {
-    margin-top: auto;
-}
 
 #save > section:first-of-type > section {
     flex-basis: var(--main-width);
@@ -224,9 +222,6 @@ hr.experience_separator {
     margin-top: 1em;
 }
 
-#save > section:first-of-type > section > section > section:last-child {
-    margin-top: auto;
-}
 
 .references address {
     font-style: normal;
@@ -248,19 +243,28 @@ hr.experience_separator {
     font-size: 100%;
 }
 
-.skills > ul:after {
+.stack_group {
+    font-weight: 500;
+    margin: 8px 0 0;
+}
+
+.stack_group:first-child {
+    margin-top: 0;
+}
+
+.skills ul:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.skills > ul > li {
+.skills ul > li {
     display: block;
     float: left;
     margin: 6px 6px 0 0;
 }
 
-.skills > ul > li > span {
+.skills ul > li > span {
     background-color: #f5f5f5;
     border: 1px solid rgba(45, 45, 45, 0.1618);
     border-radius: 3px;
@@ -303,11 +307,6 @@ hr.experience_separator {
     padding: 0;
 }
 
-.experience ol {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-}
 
 .experience ol > li > hr {
     border-top: 1px dashed lightgray;
@@ -318,7 +317,6 @@ hr.experience_separator {
 .experience ol > li {
     margin: 0;
     padding: 0;
-    flex-basis: 100%;
     font-weight: 300;
 }
 
@@ -358,6 +356,10 @@ hr.experience_separator {
 .education ol > li div > *:last-child,
 .experience ol > li header > *:last-child {
     margin-left: auto;
+}
+
+.experience ol > li header > p:only-child {
+    margin-left: 0;
 }
 
 .experience ol > li ul {

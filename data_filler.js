@@ -23,57 +23,38 @@ var data = {
     },
   ],
   stack: [
-    "Kubernetes",
-    "AWS",
-    "Terraform",
-    "Python",
-    "Go",
-    "Helm",
-    "RabbitMQ",
-    "MongoDB / AWS DocumentDB",
-    "FastAPI",
-    "GitLab CI",
-    "pytest",
+    { group: "Languages", items: ["Python", "Go"] },
+    {
+      group: "Platform & tools",
+      items: [
+        "Kubernetes",
+        "AWS",
+        "Terraform",
+        "Helm",
+        "RabbitMQ",
+        "MongoDB / AWS DocumentDB",
+        "FastAPI",
+        "GitLab CI",
+        "pytest",
+      ],
+    },
   ],
   work: [
     {
       organization: "RingCentral",
-      time_range: "July 2026 - Present",
-      position: "Senior Platform Engineer",
+      time_range: "May 2024 - Present",
+      position: "Platform Engineer → Senior Platform Engineer",
       summary:
-        "Platform/SRE team building and operating a production continuous delivery orchestrator across multiple environments. Deployment engineers describe deployments as pipelines of steps, each integrating with an external service to perform an action, to deliver services with strict SLA/SLO requirements.",
+        "Platform/SRE team building and operating a production continuous delivery orchestrator across multiple environments. Contributed to migrating it from AWS Lambda and Step Functions to Kubernetes-based microservices; promoted to Senior Platform Engineer in July 2026.",
       points: [
-        "Built and rolled out to production a Go service monitoring RabbitMQ queues fed with copies of events via exchange bindings, with Grafana dashboards; in the first month it helped catch a production bug and prevent an incident.",
-        "Added monitoring of integration service availability and token/SSL certificate expiry.",
-        "Implemented ownership-based authorization (CODEOWNERS-backed) to comply with application security requirements.",
-        "Introduced spec-driven development with OpenSpec, improved documentation to provide AI agents with detailed project context, and integrated AI code review.",
-      ],
-      stack: [
-        "Go",
-        "Python 3.13",
-        "FastAPI",
-        "MongoDB",
-        "Redis",
-        "RabbitMQ",
-        "Kubernetes",
-        "Helm",
-        "GitLab CI",
-        "Traefik",
-        "pytest",
-        "AWS",
-      ],
-    },
-    {
-      organization: "RingCentral",
-      time_range: "May 2024 - June 2026",
-      position: "Platform Engineer",
-      summary:
-        "Same team, earlier stage of the platform. Contributed to the migration of the CD orchestrator from AWS Lambda and Step Functions to Kubernetes-based microservices, implementing key services and infrastructure components.",
-      points: [
-        "Designed and implemented Kubernetes environments (Dev and Prod), including manifests, Helm charts, CI/CD workflows.",
         "Cut request latency ~5x (≈1s → ≈0.2s) by replacing an ORM operation that loaded the entire MongoDB collection into application memory with a hand-written aggregation pipeline executed through the ORM.",
-        "Reduced AWS infrastructure costs by ~30% (both Production and Development environments) by introducing Parameter Store and Secrets Manager Lambda extension.",
+        "Reduced AWS infrastructure costs by ~30% (Production and Development) by introducing Parameter Store and Secrets Manager Lambda extension.",
+        "Built and rolled out to production a Go service monitoring RabbitMQ queues fed with copies of events via exchange bindings, with Grafana dashboards; in the first month it helped catch a production bug and prevent an incident.",
+        "Designed and implemented Kubernetes environments (Dev and Prod), including manifests, Helm charts, CI/CD workflows.",
+        "Implemented ownership-based authorization (CODEOWNERS-backed) to comply with application security requirements.",
         "Migrated AWS infrastructure from Serverless framework to Terraform, improving consistency, reproducibility, and deployment control.",
+        "Introduced spec-driven development with OpenSpec, improved documentation to provide AI agents with detailed project context, and integrated AI code review.",
+        "Added monitoring of integration service availability and token/SSL certificate expiry.",
         "Onboarded and mentored a new team member; introduced regular retrospectives to improve team collaboration.",
       ],
       stack: [
@@ -93,37 +74,15 @@ var data = {
       ],
     },
     {
-      organization: "Side project",
-      time_range: "June 2023 - February 2024",
-      position: "Go developer",
-      summary:
-        "Designed and deployed backend services for CMS and mobile applications using Go, Gin, AWS DocumentDB, Redis.",
-      points: [
-        "Built backend services for CMS and mobile app from scratch, with stateless architecture and async communication via Amazon SQS to support scaling.",
-        "Implemented RBAC using Casbin and JWT authentication.",
-        "Designed CI/CD pipelines for multi-environment deployment; containerized services with Docker.",
-        "Migrated database from MongoDB to DocumentDB, simplifying operations and improving maintainability.",
-      ],
-      stack: [
-        "Go 1.20",
-        "Gin",
-        "MongoDB/DocumentDB",
-        "AWS",
-        "Docker",
-        "GitLab CI",
-        "Redis",
-      ],
-    },
-    {
       organization: "JettyCloud",
       time_range: "June 2022 - May 2024",
       position: "Python / Go developer",
       summary:
         "JettyCloud is an external partner of RingCentral; contributed to RingCentral UCaaS platform (5M+ users worldwide). Part of team developing internal test frameworks to ensure platform's smooth functioning.",
       points: [
-        "Maintained test framework and added features to distributed test platform; enhanced test stubs for specific services.",
-        "Enhanced InfluxDB library to support labeled metrics.",
-        "Created Jenkins job for test platform staging deployment.",
+        "Maintained test framework for SIP telephony and added features to distributed test platform; enhanced test stubs for specific services.",
+        "Rewrote much of the team's custom InfluxDB metrics library to fix incorrect label handling — metrics began storing correctly and feeding Grafana dashboards, surfacing platform issues before QA automation engineers noticed them.",
+        "Automated service deployments: wrote an Ansible playbook to eliminate manual deploys and a Jenkins job to run it against the production environment.",
       ],
       stack: [
         "Python 3.9",
@@ -135,6 +94,7 @@ var data = {
         "Go",
         "InfluxDB",
         "Grafana",
+        "Ansible",
       ],
     },
     {
@@ -217,6 +177,45 @@ var data = {
     //   ],
     // },
   ],
+  side_projects: [
+    {
+      name: "TypeSpeed",
+      time_range: "June 2026 - Present",
+      link: "https://duch94.github.io/typespeed-site/",
+      link_label: "duch94.github.io/typespeed-site",
+      summary:
+        "Native macOS touch-typing tutor for Apple Silicon: home-row-first curriculum with real-time finger guidance and per-lesson speed and accuracy stats. One-time purchase, no subscriptions.",
+      points: [
+        "Built the finger-guidance engine: character-to-finger-zone keyboard mapping with per-key hand/side assignment and shift-key resolution.",
+        "Structured as a zero-dependency Swift 6 project: SwiftUI app consuming a pure-Foundation core (domain, content, persistence) with Sendable domain models.",
+        "69 markdown lessons across 15 chapters parsed at runtime; JSON progress persistence with automatic legacy-format migration.",
+        "Fully sandboxed with no network entitlement, no accounts, and no analytics; custom dependency-free test runner; CI via Xcode Cloud.",
+      ],
+      stack: ["Swift 6", "SwiftUI", "SPM", "XcodeGen", "Xcode Cloud"],
+    },
+    {
+      name: "CMS & mobile backend",
+      role: "Go developer",
+      time_range: "June 2023 - February 2024",
+      summary:
+        "Designed and deployed backend services for CMS and mobile applications using Go, Gin, AWS DocumentDB, Redis.",
+      points: [
+        "Built backend services for CMS and mobile app from scratch, with stateless architecture and async communication via Amazon SQS to support scaling.",
+        "Implemented RBAC using Casbin and JWT authentication.",
+        "Designed CI/CD pipelines for multi-environment deployment; containerized services with Docker.",
+        "Migrated database from MongoDB to DocumentDB, simplifying operations and improving maintainability.",
+      ],
+      stack: [
+        "Go 1.20",
+        "Gin",
+        "MongoDB/DocumentDB",
+        "AWS",
+        "Docker",
+        "GitLab CI",
+        "Redis",
+      ],
+    },
+  ],
 };
 
 // Logic which fills HTML template with data above
@@ -242,13 +241,21 @@ document.getElementById("about_me.contacts.github").innerHTML =
 document.getElementById("about_me.contacts.github").href =
   "https://" + data.about_me.contacts.github;
 
-data.stack.forEach(function (item) {
-  var ul = document.getElementById("stack");
-  var li = document.createElement("li");
-  var span = document.createElement("span");
-  span.appendChild(document.createTextNode(item));
-  li.appendChild(span);
-  ul.appendChild(li);
+data.stack.forEach(function (stack_group) {
+  var group_label = document.createElement("p");
+  group_label.setAttribute("class", "stack_group");
+  group_label.innerHTML = stack_group.group;
+  document.getElementById("stack").appendChild(group_label);
+
+  var ul = document.createElement("ul");
+  stack_group.items.forEach(function (item) {
+    var li = document.createElement("li");
+    var span = document.createElement("span");
+    span.appendChild(document.createTextNode(item));
+    li.appendChild(span);
+    ul.appendChild(li);
+  });
+  document.getElementById("stack").appendChild(ul);
 });
 data.about_me.languages.forEach(function (item) {
   var ul = document.getElementById("languages");
@@ -315,6 +322,68 @@ data.work.forEach(function (work_item) {
   li.appendChild(hr);
 });
 
+data.side_projects.forEach(function (project) {
+  var li = document.createElement("li");
+  var header = document.createElement("header");
+
+  var p = document.createElement("p");
+  p.setAttribute("class", "sanserif work-position");
+  p.innerHTML = project.name;
+  header.appendChild(p);
+
+  if (project.time_range) {
+    var time = document.createElement("time");
+    time.innerHTML = project.time_range;
+    header.appendChild(time);
+  }
+  li.appendChild(header);
+
+  var span = document.createElement("span");
+  if (project.link) {
+    var a = document.createElement("a");
+    a.href = project.link;
+    a.innerHTML = project.link_label || project.link;
+    span.appendChild(a);
+  } else if (project.role) {
+    span.innerHTML = project.role;
+  }
+  li.appendChild(span);
+
+  var summary = document.createElement("p");
+  summary.setAttribute("class", "experience");
+  summary.appendChild(document.createTextNode(project.summary));
+  li.appendChild(summary);
+
+  var ul = document.createElement("ul");
+  ul.className = "work-points";
+  project.points.forEach(function (point_item) {
+    var li_point = document.createElement("li");
+    li_point.appendChild(document.createTextNode(point_item));
+    ul.appendChild(li_point);
+  });
+  li.appendChild(ul);
+
+  if (project.stack) {
+    var ul_stack = document.createElement("ul");
+    ul_stack.setAttribute("class", "skills_on_work");
+    var ul_inner_stack = document.createElement("ul");
+    project.stack.forEach(function (item) {
+      var li_stack = document.createElement("li");
+      var span_stack = document.createElement("span");
+      span_stack.appendChild(document.createTextNode(item));
+      li_stack.appendChild(span_stack);
+      ul_inner_stack.appendChild(li_stack);
+    });
+    ul_stack.appendChild(ul_inner_stack);
+    li.appendChild(ul_stack);
+  }
+
+  var hr = document.createElement("hr");
+  li.appendChild(hr);
+
+  document.getElementById("side_projects").appendChild(li);
+});
+
 data.education.forEach(function (edu_item) {
   var ol = document.getElementById("education");
   var li = document.createElement("li");
@@ -339,15 +408,6 @@ data.education.forEach(function (edu_item) {
   li.appendChild(div_org);
 
   ol.appendChild(li);
-});
-
-const copy_link_button = document.getElementById("copy_link_button");
-copy_link_button.addEventListener("click", function () {
-  document.getElementById("copy_link_text").innerText = "Copied!";
-  // document.getElementById("copy_link_text").style = "Copied!";
-  setTimeout(() => {
-    document.getElementById("copy_link_text").innerText = "Link";
-  }, 2000);
 });
 
 const music_button = document.getElementById("music_button");

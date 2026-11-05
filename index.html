@@ -68,13 +68,6 @@
                                 >
                                     Print
                                 </button>
-                                <button
-                                    class="fa fa-link"
-                                    id="copy_link_button"
-                                    onclick="navigator.clipboard.writeText(window.location.href)"
-                                >
-                                    Link
-                                </button>
                                 <button class="fa fa-music" id="music_button">
                                     Music
                                 </button>
@@ -148,10 +141,10 @@
                     </section>
                     <section class="skills">
                         <h6>Current stack</h6>
-                        <ul id="stack"></ul>
+                        <div id="stack"></div>
                     </section>
                     <section class="skills">
-                        <h6>Languages</h6>
+                        <h6>Spoken languages</h6>
                         <ul id="languages"></ul>
                     </section>
                 </aside>
@@ -210,6 +203,11 @@
                         <section class="education">
                             <h6>Education</h6>
                             <ol id="education"></ol>
+                        </section>
+                        <hr class="experience_separator" />
+                        <section class="experience">
+                            <h6>Side projects</h6>
+                            <ol id="side_projects"></ol>
                         </section>
                     </section>
                 </section>
